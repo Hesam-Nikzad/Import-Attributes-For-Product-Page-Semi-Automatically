@@ -1,0 +1,251 @@
+
+Search
+
+TIP US
+1.5M109K
+RSS
+EV
+MERCH
+LOG INSIGN UP
+ADVERTISEMENTS
+
+Samsung Galaxy S22 Ultra 5G
+Samsung Galaxy S22 Ultra 5G
+MORE PICTURES
+Released 2022, February 25
+228g / 229g (mmWave), 8.9mm thickness
+Android 12, up to Android 13, One UI 5
+128GB/256GB/1TB storage, no card slot
+63%
+9,227,843 HITS
+1390
+BECOME A FAN
+6.8"
+1440x3088 pixels
+108MP
+4320p
+8/12GB RAM
+Exynos 2200
+5000mAh
+Li-Ion
+REVIEW
+PRICES
+PICTURES
+COMPARE
+OPINIONS
+
+Versions: SM-S908B, SM-S908B/DS (International); SM-S908U (USA); SM-S908U1 (USA unlocked); SM-S908W (Canada); SM-S908N (Korea); SM-S9080 (China); SM-S908E (Asia/Africa)
+
+NETWORK	Technology	
+GSM / CDMA / HSPA / EVDO / LTE / 5G
+LAUNCH	Announced	2022, February 09
+Status	Available. Released 2022, February 25
+BODY	Dimensions	163.3 x 77.9 x 8.9 mm (6.43 x 3.07 x 0.35 in)
+Weight	228 g / 229 g (mmWave) (8.04 oz)
+Build	Glass front (Gorilla Glass Victus+), glass back (Gorilla Glass Victus+), aluminum frame
+SIM	Nano-SIM and eSIM or Dual SIM (2 Nano-SIMs and eSIM, dual stand-by)
+ 	IP68 dust/water resistant (up to 1.5m for 30 mins)
+Armor aluminum frame with tougher drop and scratch resistance (advertised)
+Stylus, 2.8ms latency (Bluetooth integration, accelerometer, gyro)
+DISPLAY	Type	Dynamic AMOLED 2X, 120Hz, HDR10+, 1750 nits (peak)
+Size	6.8 inches, 114.7 cm2 (~90.2% screen-to-body ratio)
+Resolution	1440 x 3088 pixels (~500 ppi density)
+Protection	Corning Gorilla Glass Victus+
+ 	Always-on display
+PLATFORM	OS	Android 12, upgradable to Android 13, One UI 5
+Chipset	Exynos 2200 (4 nm) - Europe
+Qualcomm SM8450 Snapdragon 8 Gen 1 (4 nm) - ROW
+CPU	Octa-core (1x2.8 GHz Cortex-X2 & 3x2.50 GHz Cortex-A710 & 4x1.8 GHz Cortex-A510) - Europe
+Octa-core (1x3.00 GHz Cortex-X2 & 3x2.50 GHz Cortex-A710 & 4x1.80 GHz Cortex-A510) - ROW
+GPU	Xclipse 920 - Europe
+Adreno 730 - ROW
+MEMORY	Card slot	No
+Internal	128GB 8GB RAM, 256GB 12GB RAM, 512GB 12GB RAM, 1TB 12GB RAM
+ 	UFS 3.1
+MAIN CAMERA	Quad	108 MP, f/1.8, 23mm (wide), 1/1.33", 0.8µm, PDAF, Laser AF, OIS
+10 MP, f/4.9, 230mm (periscope telephoto), 1/3.52", 1.12µm, dual pixel PDAF, OIS, 10x optical zoom
+10 MP, f/2.4, 70mm (telephoto), 1/3.52", 1.12µm, dual pixel PDAF, OIS, 3x optical zoom
+12 MP, f/2.2, 13mm, 120˚ (ultrawide), 1/2.55", 1.4µm, dual pixel PDAF, Super Steady video
+Features	LED flash, auto-HDR, panorama
+Video	8K@24fps, 4K@30/60fps, 1080p@30/60/240fps, 720p@960fps, HDR10+, stereo sound rec., gyro-EIS
+SELFIE CAMERA	Single	40 MP, f/2.2, 26mm (wide), 1/2.82", 0.7µm, PDAF
+Features	Dual video call, Auto-HDR
+Video	4K@30/60fps, 1080p@30fps
+SOUND	Loudspeaker	Yes, with stereo speakers
+3.5mm jack	No
+ 	32-bit/384kHz audio
+Tuned by AKG
+COMMS	WLAN	Wi-Fi 802.11 a/b/g/n/ac/6e, dual-band, Wi-Fi Direct
+Bluetooth	5.2, A2DP, LE
+Positioning	GPS, GLONASS, BDS, GALILEO
+NFC	Yes
+Radio	No
+USB	USB Type-C 3.2, OTG
+FEATURES	Sensors	Fingerprint (under display, ultrasonic), accelerometer, gyro, proximity, compass, barometer
+ 	Samsung DeX, Samsung Wireless DeX (desktop experience support)
+Bixby natural language commands and dictation
+Samsung Pay (Visa, MasterCard certified)
+Ultra Wideband (UWB) support
+BATTERY	Type	Li-Ion 5000 mAh, non-removable
+Charging	45W wired, PD3.0
+15W wireless (Qi/PMA)
+4.5W reverse wireless
+MISC	Colors	Phantom Black, White, Burgundy, Green, Graphite, Red, Sky Blue, Bora Purple
+Models	SM-S908B, SM-S908B/DS, SM-S908U, SM-S908U1, SM-S908W, SM-S908N, SM-S9080, SM-S908E, SM-S908E/DS
+SAR	1.18 W/kg (head)     0.98 W/kg (body)    
+SAR EU	1.05 W/kg (head)     1.58 W/kg (body)    
+Price	$ 708.99 / € 935.00 / £ 824.00 / ₹ 93,500 / C$ 1,047.00
+TESTS	Performance	AnTuTu: 968359 (v9)
+GeekBench: 3657 (v5.1)
+GFXBench: 37fps (ES 3.1 onscreen)
+Display	Contrast ratio: Infinite (nominal)
+Camera	Photo / Video
+Loudspeaker	-27.3 LUFS (Good)
+Battery life	
+Endurance rating 108h
+Disclaimer. We can not guarantee that the information on this page is 100% correct. Read more
+
+REVIEW
+PRICES
+PICTURES
+COMPARE
+OPINIONS
+
+Pricing
+128GB 8GB RAM	$ 708.99	$ 850.00
+256GB 12GB RAM	$ 926.00	$ 999.00
+512GB 12GB RAM	$ 1,055.00	$ 1,094.00
+RENEWED	$ 681.00	£ 721.00
+Similarly priced
+Google Pixel 7 Pro
+Google Pixel 7 Pro$ 679.99
+Apple iPhone 13 Pro Max
+Apple iPhone 13 Pro Max$ 775.00
+Nothing Phone (1)
+Nothing Phone (1)$ 745.00
+Xiaomi 12 Pro
+Xiaomi 12 Pro$ 733.00
+Samsung Galaxy Z Flip4
+Samsung Galaxy Z Flip4$ 648.00
+SAMSUNG GALAXY S22 ULTRA 5G - USER OPINIONS AND REVIEWS
+G
+GodsendNYC 6yF21 Dec 2022
+This is by far my favorite phone, I have 2 of them. The only thing I want is a more efficient SoC. Definitely going for the S23 Ultra just for that. Everything else is great on this phone if you actually know how to use it to its full potential. I�...
+
+Reply
+Z
+Zero x{619 Dec 2022
+Just because samsung removed the SD card support he already called them scam 🤭🤭🤣🤣 If he had complains with S22 Ultra, why not buy a much lower phone with SD Card support since he is just using the phone for music purposes?! 🤣🤣🤣 also, why is he giving...
+
+Reply
+M
+Morshed EQp19 Dec 2022
+Because internal storage is big enough, and you got the option to buy a lossless mp3 player. Those are very cheap, can even support DSD256 decoding.
+
+Reply
+READ ALL OPINIONSPOST YOUR OPINIONTotal user opinions: 2615
+
+ADVERTISEMENTS
+
+ PHONE FINDER
+SAMSUNG
+APPLE
+HUAWEI
+NOKIA
+SONY
+LG
+HTC
+MOTOROLA
+LENOVO
+XIAOMI
+GOOGLE
+HONOR
+OPPO
+REALME
+ONEPLUS
+VIVO
+MEIZU
+BLACKBERRY
+ASUS
+ALCATEL
+ZTE
+MICROSOFT
+VODAFONE
+ENERGIZER
+CAT
+SHARP
+MICROMAX
+INFINIX
+TCL
+ULEFONE
+TECNO
+DOOGEE
+BLACKVIEW
+BLU
+PANASONIC
+PLUM
+ ALL BRANDS RUMOR MILL
+ADVERTISEMENTS
+
+PRICES
+Samsung Galaxy S22 Ultra 5G
+128GB 8GB RAM
+$ 708.99
+$ 850.00
+$ 895.99
+256GB 12GB RAM
+$ 926.00
+$ 999.00
+$ 1,149.99
+512GB 12GB RAM
+$ 1,055.00
+$ 1,094.00
+$ 1,249.99
+RENEWED
+$ 681.00
+£ 721.00
+SHOW ALL PRICES
+GALAXY S22 ULTRA 5G IN THE NEWS
+
+The best portrait camera is attached to a quirky smartphone11 Dec 2022
+
+Weekly deals: the best smartphone deals from Amazon in Germany, the US, the UK and India04 Dec 2022
+
+Top phone deals from US Black Friday week25 Nov 2022
+
+Samsung Galaxy A34 renders leak24 Nov 2022
+MORE RELATED ARTICLES
+
+CHECK PRICE
+WElectronics
+SAMSUNG GALAXY S22 ULTRA 5G REVIEWS
+Samsung Galaxy S22 Ultra review
+SAMSUNG GALAXY S22 ULTRA REVIEW
+Samsung Galaxy S22 Ultra long-term review
+SAMSUNG GALAXY S22 ULTRA LONG-TERM REVIEW
+Best camera phones 2022 - buyer’s guideBEST CAMERA PHONES 2022 - BUYER’S GUIDEBest US market phones of 2021 - buyer’s guideBEST US MARKET PHONES OF 2021 - BUYER’S GUIDE
+ADVERTISEMENTS
+
+RELATED DEVICES
+Phone
+Apple iPhone 14 Pro MaxPhone
+Samsung Galaxy S21 Ultra 5GPhone
+Google Pixel 7 ProPhone
+Samsung Galaxy S23 UltraPhone
+Samsung Galaxy S22+ 5GPhone
+Samsung Galaxy S22 5G
+MORE RELATED DEVICES
+
+ADVERTISEMENTS
+
+POPULAR FROM SAMSUNG
+Phone
+Samsung Galaxy S23 UltraPhone
+Samsung Galaxy S22 Ultra 5GPhone
+Samsung Galaxy A53 5GPhone
+Samsung Galaxy A13Phone
+Samsung Galaxy S22 5GPhone
+Samsung Galaxy A33 5G
+MORE FROM SAMSUNG
+
+Home News Reviews Compare Coverage Glossary FAQ RSS feed Youtube Facebook Twitter Instagram© 2000-2022 GSMArena.com Mobile version Android app Tools Contact us Merch store Privacy Terms of use
