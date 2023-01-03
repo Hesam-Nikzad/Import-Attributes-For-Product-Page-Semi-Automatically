@@ -3,7 +3,9 @@ import json
 class GSM_Arena:
     
     def __init__(self, path='', fileName=''):
+        self.path = path
         path_in = path + fileName
+        self.fileName = fileName[:-4]
         with open(path_in) as f:
             self.lines = f.readlines()
         self.keywords = ['NETWORK', 'LAUNCH', 'BODY', 'DISPLAY', 'PLATFORM', 'MEMORY', 'MAIN CAMERA', 
@@ -48,16 +50,16 @@ class GSM_Arena:
                                 dict[keyword][key].append(list[0])
 
                             i += 1
-                            if next_keyword == 'Disclaimer': break
+                            if next_keyword in ['Disclaimer', 'TESTS']: break
 
         return dict
 
-    def dict2json(self, dict, name):
-        fileName = name + '.json'
+    def dict2json(self, dict):
+        fileName = self.path + self.fileName + '.json'
         with open(fileName, 'w') as f:
             json.dump(dict, f)
 
-
-object = GSM_Arena(fileName='s22.txt')
+path = 'C:/Users/Hessum/OneDrive/Python Projects/bitt/Import-Attributes-For-Product-Page-Semi-Automatically/'
+object = GSM_Arena(path=path, fileName='xiaomi.txt')
 dict = object.txt2dict()
-object.dict2json(dict, 's22')
+object.dict2json(dict)
