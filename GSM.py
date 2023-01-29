@@ -84,7 +84,7 @@ class Mobile_Page:
 
         if URL != None and proxy != None:
             try:
-                self.page = requests.get(URL, proxies={"http": proxy, "https": proxy})
+                self.page = requests.get(URL, timeout=20, proxies={"http": proxy, "https": proxy})
                 self.soup = BeautifulSoup(self.page.content, "html.parser")
                 title = self.soup.find('h1').text
                 if title == 'Too Many Requests':
@@ -106,9 +106,6 @@ class Mobile_Page:
             self.page = open(path, "r").read()
             self.soup = BeautifulSoup(self.page, "html.parser")
         
-        
-        
-    
     def Crawl(self):
         DICT = {}
         Tables = self.soup.find_all('table', cellspacing='0')
@@ -142,17 +139,10 @@ class Proxies:
         self.Proxy = []
 
         if local == False:
-            page = requests.get('https://free-proxy-list.net/')
-            soup = BeautifulSoup(page.content, "html.parser")
-            Table = soup.find('table', class_='table table-striped table-bordered').find('tbody')
-            Rows = Table.find_all('tr')
-            
-            for Row in Rows:
-                Row = Row.find_all('td')
-                proxy = 'http://' + Row[0].text + ':' + Row[1].text
-                self.Proxy.append(proxy)
-            print('%s proxies have been fetched from https://free-proxy-list.net/' %len(self.Proxy))
-
+            self.proxyscrape()
+            #self.Free_Proxy_List()
+            #self.geonode()    
+        
         elif local == True:
             path = os.getcwd().replace('\\', '/') + '/Proxies.txt'
             f = open(path, 'r')
@@ -163,12 +153,49 @@ class Proxies:
                 self.Proxy.append(proxy)
             print('%s proxies have been fetched localy' %len(self.Proxy))
 
+    def Free_Proxy_List(self):
+        page = requests.get('https://free-proxy-list.net/')
+        soup = BeautifulSoup(page.content, "html.parser")
+        Table = soup.find('table', class_='table table-striped table-bordered').find('tbody')
+        Rows = Table.find_all('tr')
+        n = len(self.Proxy)
+        for Row in Rows:
+            Row = Row.find_all('td')
+            proxy = 'http://' + Row[0].text + ':' + Row[1].text
+            self.Proxy.append(proxy)
+        print('%s proxies have been fetched from https://free-proxy-list.net/' %(len(self.Proxy)-n))
+
+    def geonode(self):
+        page = []
+        for i in range(1, 15):
+            URL = 'https://proxylist.geonode.com/api/proxy-list?limit=500&page=%s&sort_by=lastChecked&sort_type=desc' %i
+            page.extend(requests.get(URL).json()['data'])
+            print('Page %s of geonode API has been loaded' %i)
+        n = len(self.Proxy)
+        for dict in page:
+            if dict['protocols'][0] == 'http':
+                proxy = 'http://' + dict['ip'] + ':' + dict['port']
+                self.Proxy.append(proxy)
+                
+        print('%s proxies have been fetched from https://geonode.com/' %(len(self.Proxy)-n))
+
+    def proxyscrape(self):
+        URL = 'https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=1000&country=all&ssl=all&anonymity=all'
+        resp = requests.get(URL).text
+        resp = resp.strip()
+        resp = resp.split('\n')
+        n = len(self.Proxy)
+        for proxy in resp:
+            proxy = 'http://' + proxy[:-1]
+            self.Proxy.append(proxy)
+        print('%s proxies have been fetched from https://proxyscrape.com/' %(len(self.Proxy)-n))
+
     def Select(self, Next=False):
         if Next == True:
             self.i += 1
             print('The proxy changed to number %s' %self.i)
         
-        if self.i >= 299:
+        if self.i >= (len(self.Proxy) - 1):
             return None
         
         return self.Proxy[self.i]
@@ -273,6 +300,7 @@ class DataFlow:
                     
                     proxy = Proxy.Select(Next=True)          
                     if proxy == None:
+                        Mobile.status = 'Banned'
                         break
                     
                     try: 
@@ -280,8 +308,11 @@ class DataFlow:
                     except:
                         Mobile.status = 'Banned'
                 
-                Mobile.Crawl()
-                Mobile.Export_Json(path + '%s/' %brandName, fileName=deviceFullName)
+                try:
+                    Mobile.Crawl()
+                    Mobile.Export_Json(path + '%s/' %brandName, fileName=deviceFullName)
+                except:
+                    pass
 
             try: 
                 if Mobile.status == 'Banned':
@@ -289,10 +320,15 @@ class DataFlow:
                         break
             except:
                 pass
-                
 
-# --------- Main ---------
-DF = DataFlow()
-DF.Brands()
-DF.Brand_General_Info()
-DF.Crawl_Mobile()
+
+def main ():
+    DF = DataFlow()
+    #DF.Brands()
+    #DF.Brand_General_Info()
+    DF.Crawl_Mobile()
+
+
+if __name__ == "__main__":
+    while True:
+        main()
