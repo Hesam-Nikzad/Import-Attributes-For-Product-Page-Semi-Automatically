@@ -275,6 +275,13 @@ class DataFlow:
         except:
             Proxy = Proxies(local=True)
 
+        f = open(self.path + 'Black_List.txt', 'r')
+        lines = f.readlines()
+        blackList = []
+        for line in lines:
+            line = line.strip()
+            blackList.append(line)
+
         path = self.path + 'Brands/'
         for name in glob.glob(path + '*/' , recursive = True):
 
@@ -289,6 +296,9 @@ class DataFlow:
                 
                 if os.path.exists(mobilePath) and len(json.load(open(mobilePath)).keys()) != 0:
                     print('%s Json file is already done' %deviceFullName)
+                    continue
+                
+                if deviceFullName in blackList:
                     continue
                 
                 print('Crawling %s has been started' %deviceFullName)
@@ -312,7 +322,8 @@ class DataFlow:
                     Mobile.Crawl()
                     Mobile.Export_Json(path + '%s/' %brandName, fileName=deviceFullName)
                 except:
-                    pass
+                    f = open(self.path + 'Black_List.txt', 'a')
+                    f.write(deviceFullName)
 
             try: 
                 if Mobile.status == 'Banned':
