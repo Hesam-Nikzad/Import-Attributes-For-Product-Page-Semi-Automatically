@@ -81,6 +81,8 @@ class Brand_Page:
 class Mobile_Page:
     def __init__(self, URL=None, path=None, proxy=None):
         self.status = 'OK'
+        #self.Path = 'C:/Users/Hessum/OneDrive/Python Projects/bitt/Import-Attributes-For-Product-Page-Semi-Automatically/Pics/'
+        self.imageFlag = True
 
         if URL != None and proxy != None:
             try:
@@ -89,6 +91,10 @@ class Mobile_Page:
                 title = self.soup.find('h1').text
                 if title == 'Too Many Requests':
                     self.status = 'Banned'
+
+                image_element = self.soup.find('img', class_='specs-photo-main')
+                self.image_url = image_element['src']
+                
             except:
                 self.status = 'error'
 
@@ -125,6 +131,17 @@ class Mobile_Page:
         self.Table = DICT
         return DICT
 
+    def Image(self, proxy):
+            
+        try:
+            response = requests.get(self.image_url, timeout=20, proxies={"http": proxy, "https": proxy})
+            #print(response.content)
+            print(type(response.content))
+            self.Picture = response.content
+            self.imageFlag = False
+        except:
+            self.imageFlag = True
+        
     def Export_Json(self, path, fileName=None):
         if fileName == None:
             Name = self.soup.find('title').text
@@ -140,7 +157,7 @@ class Proxies:
 
         if local == False:
             self.proxyscrape()
-            #self.Free_Proxy_List()
+            self.Free_Proxy_List()
             #self.geonode()    
         
         elif local == True:
@@ -283,6 +300,7 @@ class DataFlow:
             blackList.append(line)
 
         path = self.path + 'Brands/'
+        picturPath = self.path + 'Pictures/'
         for name in glob.glob(path + '*/' , recursive = True):
 
             brandName = name[name.find('\\')+1 : name.rfind('\\')]
@@ -299,9 +317,13 @@ class DataFlow:
                     continue
                 
                 if deviceFullName in blackList:
+                    print('Skiped %s because it is in the black list' %deviceFullName)
                     continue
                 
                 print('Crawling %s has been started' %deviceFullName)
+                brandPicturePath = picturPath + '%s' %brandName
+                if not os.path.exists(brandPicturePath):
+                    os.makedirs(brandPicturePath)
 
                 Mobile = Mobile_Page(URL=URL, proxy=Proxy.Select())
 
@@ -311,24 +333,48 @@ class DataFlow:
                     proxy = Proxy.Select(Next=True)          
                     if proxy == None:
                         Mobile.status = 'Banned'
-                        break
+                        Proxy = Proxies()
                     
                     try: 
                         Mobile = Mobile_Page(URL=URL, proxy=proxy)
                     except:
                         Mobile.status = 'Banned'
                 
+                print(Mobile.image_url)
+                # Image downloading
+                while Mobile.imageFlag:
+                    Mobile.Image(URL=Mobile.image_url, proxy=proxy)
+                    
+                    if Mobile.imageFlag:
+                        proxy = Proxy.Select(Next=True)
+
+                # Image saving
+                imageName = deviceFullName.lower().split(' ')
+                if 'android' in imageName:
+                    imageName.remove('android')
+                
+                imageName = '-'.join(imageName[:-1]) + '-00'
+                with open('%s/%s.jpg' %(brandPicturePath, imageName), 'wb') as f:
+                    f.write(Mobile.Picture)
+
+                # Crawl Mobile data
                 try:
                     Mobile.Crawl()
-                    Mobile.Export_Json(path + '%s/' %brandName, fileName=deviceFullName)
+                    if Mobile.Table['Launch']['Status'] == 'Cancelled':
+                        f = open(self.path + 'Black_List.txt', 'a')
+                        f.write(deviceFullName + '\n')
+                        f.close
+                    else:
+                        Mobile.Export_Json(path + '%s/' %brandName, fileName=deviceFullName)
                 except:
                     f = open(self.path + 'Black_List.txt', 'a')
-                    f.write(deviceFullName)
+                    f.write(deviceFullName + '\n')
+                    f.close
 
             try: 
                 if Mobile.status == 'Banned':
-                        print('GSM Arena banned crawling')
-                        break
+                    print('GSM Arena banned crawling')
+                    break
             except:
                 pass
 
@@ -341,5 +387,4 @@ def main ():
 
 
 if __name__ == "__main__":
-    while True:
-        main()
+    main()
